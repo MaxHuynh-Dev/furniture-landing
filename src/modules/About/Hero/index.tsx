@@ -3,19 +3,10 @@ import styles from './hero.module.scss';
 
 import PrimaryButton from '@Components/Buttons/PrimaryButton';
 import { Container } from '@Components/Container';
-import Heading from '@Components/Typo/Heading';
-import Paragraph from '@Components/Typo/Paragraph';
-import {
-  FontWeight,
-  TypoColor,
-  TypoFontFamily,
-  TypoTagHeading,
-  TypoTagParagraph,
-  TypoTransform,
-} from '@Enums/typo';
 import classNames from 'classnames';
 import type React from 'react';
 
+import Text from '@/components/Typo';
 import ImagePlaceHolder from '@Components/ImagePlaceHolder';
 
 function Hero(): React.ReactElement {
@@ -26,13 +17,13 @@ function Hero(): React.ReactElement {
       </div>
       <Container className={styles.hero_container}>
         <div className={styles.hero_container_inner}>
-          <Heading
-            as={TypoTagHeading.h1}
-            size={130}
-            fontFamily={TypoFontFamily.raleway}
-            fontWeight={FontWeight.semiBold}
-            color={TypoColor.vani}
-            textTransform={TypoTransform.uppercase}
+          <Text
+            Comp={'h1'}
+            size={48}
+            font="heading"
+            weight="semibold"
+            color="default"
+            transform="uppercase"
             className={classNames(styles.hero_heading)}
           >
             <span className={classNames(styles.hero_heading_word_italic, 'split')}>We create</span>
@@ -42,12 +33,12 @@ function Hero(): React.ReactElement {
             <div className={classNames(styles.hero_heading_word_normal, 'split')}>
               wants to live in
             </div>
-          </Heading>
+          </Text>
           <div className={styles.hero_container_inner_bottom}>
-            <Paragraph as={TypoTagParagraph.p} size={18} color={TypoColor.vani}>
+            <Text Comp={'p'} size={18} transform="capitalize">
               For more than 30 years, we&apos;ve been <br /> bringing projects to life around the
               world.
-            </Paragraph>
+            </Text>
             <PrimaryButton text="Explore our work" />
           </div>
         </div>
