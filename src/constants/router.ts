@@ -1,23 +1,26 @@
 export const ROUTER = [
   {
-    label: 'About',
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'Shop',
+    href: '/shop',
+  },
+  {
+    label: 'Pages',
+    href: '/pages',
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
+  {
+    label: 'About Us',
     href: '/about',
   },
   {
-    label: 'Services',
-    href: '/services',
-  },
-
-  {
-    label: 'projects',
-    href: '/projects',
-  },
-  {
-    label: 'Gallery',
-    href: '/gallery',
-  },
-  {
-    label: 'Contact',
+    label: 'Contact us',
     href: '/contact',
   },
 ];

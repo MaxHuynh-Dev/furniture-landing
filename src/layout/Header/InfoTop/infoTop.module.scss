@@ -1,0 +1,13 @@
+.infoTop {
+  padding: rem(12px) 0;
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: rem(8px);
+    }
+  }
+}

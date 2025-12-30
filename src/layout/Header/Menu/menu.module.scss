@@ -1,0 +1,13 @@
+.menu {
+  padding: rem(16px) 0;
+  background-color: var(--color-gray-8);
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_list {
+    display: flex;
+    gap: rem(24px);
+  }
+}
