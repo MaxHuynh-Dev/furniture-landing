@@ -1,8 +1,11 @@
+'use client';
+
 import { Container } from '@/components/Container';
 import Text from '@Components/Typo';
 import { ROUTER } from '@Constants/router';
 import { PhoneCall } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import type React from 'react';
 import styles from './menu.module.scss';
 
@@ -11,25 +14,31 @@ interface MenuProps {
 }
 
 function Menu({ variant = 'dark' }: MenuProps): React.ReactElement {
+  const pathname = usePathname();
+
   return (
     <div className={styles.menu} data-variant={variant}>
       <Container className={styles.menu_container}>
         <ul className={styles.menu_list}>
-          {ROUTER.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href}>
-                <Text
-                  size={14}
-                  transform="capitalize"
-                  weight="medium"
-                  color="gray4"
-                  className={styles.menu_list_item}
-                >
-                  {item.label}
-                </Text>
-              </Link>
-            </li>
-          ))}
+          {ROUTER.map((item) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <li key={item.href}>
+                <Link href={item.href}>
+                  <Text
+                    size={14}
+                    transform="capitalize"
+                    weight="medium"
+                    color={isActive ? 'white' : 'gray4'}
+                    className={styles.menu_list_item}
+                  >
+                    {item.label}
+                  </Text>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <Link href="tel:+1234567890" className={styles.menu_phone}>

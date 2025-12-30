@@ -1,5 +1,5 @@
 export const SLUG = {
-  HOME: '/home',
+  HOME: '/',
   SHOP: '/shop',
   PAGES: '/pages',
   BLOG: '/blog',
