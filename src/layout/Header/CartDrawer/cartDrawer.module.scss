@@ -48,6 +48,9 @@
     }
     &_body {
       margin-top: rem(12px);
+      display: flex;
+      flex-direction: column;
+      gap: rem(12px);
     }
     &_item {
       display: flex;
