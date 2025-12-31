@@ -1,12 +1,27 @@
+'use client';
+
 import Text from '@/components/Typo';
 import { ShoppingCart } from 'lucide-react';
 import type React from 'react';
+import { isOpenCartDrawer } from '../../CartDrawer';
 import styles from './cartButton.module.scss';
 
 function CartButton(): React.ReactElement {
   return (
     <div className={styles.main_cart}>
-      <div className={styles.main_cart_icon}>
+      <div
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e): void => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            isOpenCartDrawer.value = !isOpenCartDrawer.value;
+          }
+        }}
+        className={styles.main_cart_icon}
+        onClick={(): void => {
+          isOpenCartDrawer.value = !isOpenCartDrawer.value;
+        }}
+      >
         <ShoppingCart
           color="var(--color-gray-6)"
           strokeWidth={1.4}
