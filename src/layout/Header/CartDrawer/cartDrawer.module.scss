@@ -29,9 +29,12 @@
     top: 0;
     right: 0;
     width: rem(456px);
-    height: 100svh;
+    height: 100%;
+    max-height: 100svh;
     background-color: var(--color-white);
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
     padding: rem(40px);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -55,6 +58,7 @@
     &_body {
       flex-grow: 1;
       overflow-y: auto;
+      max-height: calc(100% - rem(230px));
       // mask-image: linear-gradient(
       //   to bottom,
       //   transparent,
