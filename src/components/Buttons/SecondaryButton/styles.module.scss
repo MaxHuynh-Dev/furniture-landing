@@ -1,0 +1,46 @@
+.primaryButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(43px);
+  gap: rem(16px);
+  transition:
+    background-color,
+    border-color 0.3s ease;
+  background-color: var(--color-white);
+
+  &_small {
+    padding: 0 rem(24px);
+    height: rem(36px);
+    label {
+      font-size: rem(12px);
+    }
+  }
+  &_medium {
+    padding: 0 rem(32px);
+    height: rem(45px);
+    label {
+      font-size: rem(16px);
+    }
+  }
+  &_large {
+    padding: 0 rem(40px);
+    height: rem(51px);
+    label {
+      font-size: rem(16px);
+    }
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(18px);
+    height: rem(18px);
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

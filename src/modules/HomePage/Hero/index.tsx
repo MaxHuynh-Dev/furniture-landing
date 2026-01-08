@@ -1,5 +1,6 @@
 import type React from 'react';
 
+import SecondaryButton from '@/components/Buttons/SecondaryButton';
 import { Container, GridContainer } from '@/components/Container';
 import ImagePlaceHolder from '@/components/ImagePlaceHolder';
 import Text from '@/components/Typo';
@@ -44,6 +45,7 @@ function Hero(): React.ReactElement {
                   Free shipping on all your order.
                 </Text>
               </div>
+              <SecondaryButton text="Shop Now" size="large" />
             </div>
           </div>
           <div className={styles.hero_secondaryContent}>
