@@ -1,7 +1,7 @@
-import '@Styles/app.scss';
-
+// import '@Styles/app.scss';
 import { poppins } from '@Constants/fonts';
 import MainLayout from '@Layout/MainLayout';
+import '@Styles/globals.css';
 import { uiHelper } from '@Utils/uiHelper';
 import type { Metadata } from 'next';
 import Script from 'next/script';

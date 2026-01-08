@@ -1,7 +1,7 @@
 'use client';
 
 import { Container } from '@/components/Container';
-import Text from '@Components/Typo';
+import TextV2 from '@Components/TypoV2';
 import { ROUTER } from '@Constants/router';
 import { PhoneCall } from 'lucide-react';
 import Link from 'next/link';
@@ -26,15 +26,15 @@ function Menu({ variant = 'dark' }: MenuProps): React.ReactElement {
             return (
               <li key={item.href}>
                 <Link href={item.href}>
-                  <Text
+                  <TextV2
                     size={14}
                     transform="capitalize"
                     weight="medium"
-                    color={isActive ? 'white' : 'gray4'}
+                    color={isActive ? 'black' : 'gray4'}
                     className={styles.menu_list_item}
                   >
                     {item.label}
-                  </Text>
+                  </TextV2>
                 </Link>
               </li>
             );
@@ -43,9 +43,9 @@ function Menu({ variant = 'dark' }: MenuProps): React.ReactElement {
 
         <Link href="tel:+1234567890" className={styles.menu_phone}>
           <PhoneCall color={variant === 'dark' ? 'var(--color-white)' : 'var(--color-gray-9)'} />
-          <Text size={14} weight="medium" color={variant === 'dark' ? 'white' : 'gray9'}>
+          <TextV2 size={14} weight="medium" color={variant === 'dark' ? 'white' : 'gray9'}>
             (219) 555-0114
-          </Text>
+          </TextV2>
         </Link>
       </Container>
     </div>

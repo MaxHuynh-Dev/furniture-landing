@@ -46,6 +46,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/styles/tokens.stylex.ts"  ],
   "exclude": ["node_modules"]
 }

@@ -1,8 +1,7 @@
-import path from 'node:path';
-
 import { PROD_ENV } from '@Constants/envs';
 import withPWA from '@ducanh2912/next-pwa';
 import type { NextConfig } from 'next';
+import path from 'node:path';
 
 const isProd = process.env.NEXT_PUBLIC_APP_ENV === PROD_ENV;
 const baseConfig: NextConfig = {

@@ -51,6 +51,8 @@
     "zod-validation-error": "^4.0.0"
   },
   "devDependencies": {
+    "@stylexjs/babel-plugin": "^0.17.4",
+    "@stylexjs/postcss-plugin": "^0.17.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

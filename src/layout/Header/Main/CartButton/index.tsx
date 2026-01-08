@@ -1,6 +1,6 @@
 'use client';
 
-import Text from '@/components/Typo';
+import TextV2 from '@/components/TypoV2';
 import { ShoppingCart } from 'lucide-react';
 import type React from 'react';
 import { isOpenCartDrawer } from '../../CartDrawer';
@@ -29,18 +29,18 @@ function CartButton(): React.ReactElement {
           height={'3.2rem'}
         />
         <div className={styles.main_cart_count}>
-          <Text size={10} color="white" weight="medium">
+          <TextV2 size={10} color="white" weight="medium">
             2
-          </Text>
+          </TextV2>
         </div>
       </div>
       <div className={styles.main_cart_icon_text}>
-        <Text size={11} color="gray7">
+        <TextV2 size={11} color="gray7">
           Shopping cart:
-        </Text>
-        <Text size={14} weight="medium" color="gray9" style={{ lineHeight: '1em' }}>
+        </TextV2>
+        <TextV2 size={14} weight="medium" color="gray9">
           $100.00
-        </Text>
+        </TextV2>
       </div>
     </div>
   );
