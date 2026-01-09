@@ -31,7 +31,7 @@ function Menu({ variant = 'dark' }: MenuProps): React.ReactElement {
                     transform="capitalize"
                     weight="medium"
                     color={isActive ? 'white' : 'gray4'}
-                    className={styles.menu_list_item}
+                    className={'text-3xl font-bold underline'}
                   >
                     {item.label}
                   </Text>
